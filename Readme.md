@@ -1,7 +1,7 @@
 # Личный проект «{{projectTitle}}»
 
 * Студент: [{{Дмитрий Поздеев}}]({{https://github.com/likeks}}).
-* Сайт: [Мой первый проект "Седона"]{https://likeks.github.io/Sedona/}
+* Сайт: [Мой первый проект "Седона"]({https://likeks.github.io/Sedona/})
 
 ---
 

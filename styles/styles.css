@@ -1,0 +1,285 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: utl("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  color: #000;
+  background-color: #fff;
+  width: 1200px;
+}
+
+.main_page {
+  text-align: center;
+}
+
+/* Блок навигации */
+
+.navigation_list {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+
+.navigation_list a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Блок пользователя */
+
+.navigation_user {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.navigation_user a {
+  text-decoration: none;
+  text-align: center;
+}
+
+.button_brown {
+  background-color: #756157;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Приветствие */
+
+.page_welcome {
+  text-align: center;
+  background-color: lightblue;
+  background-image: url("../images/overlap.svg"), url("../images/index_background.jpg");
+  background-position: bottom, center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto, cover;
+}
+
+/* Заголовки и описания */
+
+.block_title{
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.block_description {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.item_title {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.item_description {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+/* Преимущества */
+
+.advantages_item_blue {
+  background-color: #82B3D3;
+}
+
+.advantages_item_light {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+/* Преимущества и услуги */
+
+.advantages_item_light_blue,
+.services_item_light_blue {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+/* Поиск гостиниц */
+
+.button_search {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/* Рассылка */
+
+.btn,
+.input,
+.select {
+  font-family: inherit;
+}
+
+.subscribe {
+  color: #fff;
+  background-color: lightblue;
+  background-image: url("../images/subscribe.jpg");
+  background-size: cover;
+}
+
+.button_blue {
+  color: #fff;
+  background-color: #82B3D3;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.subscribe_field {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.subscribe_button {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/* Подвал сайта */
+
+.footer_contact_phone {
+  text-decoration: none;
+  color: #000;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+/* Страница каталога */
+
+.background {
+  background-image: url("../images/catalog/header_background.jpg");
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Хлебные крошки */
+
+.inner-header_title {
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs_item {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+/* Фильтры для поиска */
+
+.catalog_filter_title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.control_label {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.control_input {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.button_apply,
+.button_reset {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+}
+
+.button_reset {
+  background-color: transparent;
+  border: none;
+}
+
+/* Сортировка */
+
+.select_control,
+.hotels_type_and_price {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333;
+}
+
+/* Карточки гостиниц */
+
+.hotels_card_title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.hotels_type {
+  text-align: left;
+}
+
+.hotels_price {
+  text-align: right;
+}
+
+.hotels_button {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.rating_text {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #F2F2F2;
+  text-transform: uppercase;
+}
+
+.button_favourites {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.button_green {
+  color: #fff;
+  background-color: #7DB54F;
+}
+
+/* Пагинация */
+
+.pagination_link {
+  text-decoration: none;
+  color: #fff;
+  background-color: #82B3D3;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.pagination_link_current {
+  color: #000;
+  background-color: #F2F2F2;
+  font-weight: 700;
+}
+
+/* Рассылка */
+
+.catalog_subscribe {
+  text-align: center;
+}

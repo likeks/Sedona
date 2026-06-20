@@ -10,7 +10,7 @@
 <body>
   <header class="page_header">
     <nav class="navigation">
-      <a class="page_navigation_logo" href="catalog.html">
+      <a class="navigation_logo" href="catalog.html">
         <img class="header_logo" src="images/header_logo.svg" width="140" height="70"
           alt="Логотип «Седона» в шапке сайта">
       </a>
@@ -33,32 +33,36 @@
 
       <ul class="navigation_user">
         <li class="navigation_item">
-          <a class="navigation_link" href="#">
-            <span class="visually_hidden">Поиск</span>
+          <a class="navigation_link search" href="#">
+            <span class="visually_hidden" hidden>Поиск</span>
           </a>
         </li>
         <li class="navigation_item">
-          <a class="navigation_link" href="#">
-            <span class="visually_hidden">Отелей в избранном</span>
+          <a class="navigation_link favourite" href="#">
+            <span class="visually_hidden" hidden>Отелей в избранном:</span>
             <span class="favourites_counter"></span>
           </a>
         </li>
         <li class="navigation_item">
-          <a class="navigation_button button_brown" href="catalog.html">Хочу сюда!</a>
+          <a class="navigation_button button_brown" href="#">
+            <span>Хочу сюда!</span>
+          </a>
         </li>
       </ul>
     </nav>
   </header>
 
   <main class="main_container main">
-    <div class="background">
+    <div class="filter_background_wrap">
       <header class="inner_header">
         <h1 class="inner-header_title">Гостиницы Седоны</h1>
+
         <!-- Хлебные крошки -->
+
         <ul class="breadcrumbs">
           <li class="breadcrumbs_item">
             <a class="breadcrumbs-link" href="index.html">
-              <span class="visually-hidden">Главная страница</span>
+              <span class="visually-hidden" hidden>Главная страница</span>
             </a>
           </li>
           <li class="breadcrumbs_item">
@@ -66,7 +70,9 @@
           </li>
         </ul>
       </header>
+
       <!-- Фильтры для поиска -->
+
       <section class="catalog_filter">
         <h2 class="visually-hidden" hidden>Фильтры для поиска гостиниц</h2>
         <form class="catalog_filter_form" action="https://echo.htmlacademy.ru/" method="get">
@@ -116,7 +122,9 @@
               </li>
             </ul>
           </fieldset>
+
           <!-- Доделать ценовой фильтр -->
+
           <div class="price_wrap">
             <fieldset class="catalog_filter_group">
               <legend class="catalog_filter_title">Стоимость, ₽:</legend>
@@ -148,21 +156,23 @@
           <option value="expensive">Сначала дорогие</option>
           <option value="popular">Сначала популярные</option>
         </select>
+
         <!-- Сортировка -->
+
         <ul class="sort_list">
-          <li class="sort_item">
-            <a class="sort sort_current" href="catalog.html?view=tile">
-              <span class="visually-hidden">Отобразить каталог в виде плиток</span>
+          <li class="sort_item sort_item_current">
+            <a class="sort icon_tile" href="catalog.html?view=tile">
+              <span class="visually-hidden" hidden>Отобразить каталог в виде плиток</span>
             </a>
           </li>
           <li class="sort_item">
-            <a class="sort" href="catalog.html?view=card">
-              <span class="visually-hidden">Отобразить каталог в виде карточек</span>
+            <a class="sort icon_card" href="catalog.html?view=card">
+              <span class="visually-hidden" hidden>Отобразить каталог в виде карточек</span>
             </a>
           </li>
           <li class="sort_item">
-            <a class="sort" href="catalog.html?view=list">
-              <span class="visually-hidden">Отобразить каталог в виде списка</span>
+            <a class="sort icon_list" href="catalog.html?view=list">
+              <span class="visually-hidden" hidden>Отобразить каталог в виде списка</span>
             </a>
           </li>
         </ul>
@@ -276,7 +286,7 @@
           <a class="pagination_link" href="#">4</a>
         </li>
         <li class="pagination_item">
-          <span class="pagination_more">...</span>
+          <span class="pagination_link pagination_more">...</span>
         </li>
         <li class="pagination_item">
           <a class="pagination_link" href="#">10</a>
@@ -303,23 +313,23 @@
 
   <footer class="page-footer">
     <section class="social">
-      <h2 class="visually-hidden">Мы в социальных сетях</h2>
+      <h2 class="visually-hidden" hidden>Мы в социальных сетях</h2>
       <ul class="social_list">
         <li class="social_item">
-          <a class="social_button" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">VKontakte</span>
+          <a class="social_button button_vk" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden" hidden>VKontakte</span>
           </a>
         </li>
 
         <li class="social_item">
-          <a class="social_button" href="https://t.me/htmlacademy">
-            <span class="visually-hidden">Telegram</span>
+          <a class="social_button button_tg" href="https://t.me/htmlacademy">
+            <span class="visually-hidden" hidden>Telegram</span>
           </a>
         </li>
 
         <li class="social_item">
-          <a class="social_button" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">YoyTube</span>
+          <a class="social_button button_youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden" hidden>YouTube</span>
           </a>
         </li>
       </ul>
@@ -328,7 +338,7 @@
     <a class="footer_contact_phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
     <a class="htmlacademy_link" href="https://htmlacademy.ru/intensive/htmlcss">
-      <span class="visually-hidden">Логотип сайта разработчика HTML Academy</span>
+      <span class="visually-hidden" hidden>Логотип сайта разработчика HTML Academy</span>
     </a>
   </footer>
 </body>

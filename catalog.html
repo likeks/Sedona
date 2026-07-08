@@ -19,7 +19,7 @@
 
       <ul class="navigation_list">
         <li class="navigation_item">
-          <a class="navigation_link navigation_link_current" href="index.html">Главная</a>
+          <a class="navigation_link" href="index.html">Главная</a>
         </li>
         <li class="navigation_item">
           <a class="navigation_link" href="#">О Седоне</a>
@@ -34,20 +34,24 @@
       <ul class="navigation_user">
         <li class="navigation_item">
           <a class="navigation_link search" href="#">
-            <span class="visually_hidden" hidden>Поиск</span>
+            <svg class="navigation_link_icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+              <path fill="#000" d="m19.5 18.008-3.7-3.68c1-1.292 1.7-2.983 1.7-4.872 0-4.376-3.6-7.956-8-7.956s-8 3.68-8 8.055c0 4.376 3.6 7.956 8 7.956 1.8 0 3.5-.597 4.9-1.69l3.7 3.679zm-10-2.486c-3.3 0-6-2.685-6-5.967s2.7-5.967 6-5.967 6 2.685 6 5.967-2.7 5.967-6 5.967"/>
+            </svg>
+            <span class="visually_hidden">Поиск</span>
           </a>
         </li>
         <li class="navigation_item">
           <a class="navigation_link favourite" href="#">
-            <span class="visually_hidden" hidden>Отелей в избранном:</span>
+            <svg class="navigation_link_icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none" viewBox="0 0 18 17">
+              <path fill="#000" d="M8.9 17c-.3 0-.6-.1-.8-.4-5.4-6.1-6.7-7.5-7-7.9C.4 7.8 0 6.6 0 5.4 0 2.4 2.4 0 5.5 0 6.8 0 8 .5 9 1.3 10 .5 11.3 0 12.5 0c3 0 5.5 2.4 5.5 5.4 0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3m-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4s-.6-.2-.8-.4c-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1q-.15 0 0 0"/>
+            </svg>
+            <span class="visually_hidden">Отелей в избранном:</span>
             <span class="favourites_counter"></span>
           </a>
         </li>
-        <li class="navigation_item">
-          <a class="navigation_button button_brown" href="#">
-            <span>Хочу сюда!</span>
-          </a>
-        </li>
+        <a class="navigation_button button_brown" href="#">
+          <span>Хочу сюда!</span>
+        </a>
       </ul>
     </nav>
   </header>
@@ -62,7 +66,7 @@
         <ul class="breadcrumbs">
           <li class="breadcrumbs_item">
             <a class="breadcrumbs-link" href="index.html">
-              <span class="visually-hidden" hidden>Главная страница</span>
+              <span class="visually_hidden">Главная страница</span>
             </a>
           </li>
           <li class="breadcrumbs_item">
@@ -74,7 +78,7 @@
       <!-- Фильтры для поиска -->
 
       <section class="catalog_filter">
-        <h2 class="visually-hidden" hidden>Фильтры для поиска гостиниц</h2>
+        <h2 class="visually_hidden">Фильтры для поиска гостиниц</h2>
         <form class="catalog_filter_form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog_filter_group">
             <legend class="catalog_filter_title">Инфраструктура:</legend>
@@ -123,6 +127,7 @@
             </ul>
           </fieldset>
 
+
           <!-- Доделать ценовой фильтр -->
 
           <div class="price_wrap">
@@ -162,17 +167,17 @@
         <ul class="sort_list">
           <li class="sort_item sort_item_current">
             <a class="sort icon_tile" href="catalog.html?view=tile">
-              <span class="visually-hidden" hidden>Отобразить каталог в виде плиток</span>
+              <span class="visually_hidden">Отобразить каталог в виде плиток</span>
             </a>
           </li>
           <li class="sort_item">
             <a class="sort icon_card" href="catalog.html?view=card">
-              <span class="visually-hidden" hidden>Отобразить каталог в виде карточек</span>
+              <span class="visually_hidden">Отобразить каталог в виде карточек</span>
             </a>
           </li>
           <li class="sort_item">
             <a class="sort icon_list" href="catalog.html?view=list">
-              <span class="visually-hidden" hidden>Отобразить каталог в виде списка</span>
+              <span class="visually_hidden">Отобразить каталог в виде списка</span>
             </a>
           </li>
         </ul>
@@ -187,20 +192,14 @@
               alt="Звёздное небо в обрамлении скал">
           </a>
           <h3 class="hotels_title">Amara Resort &amp; Spa</h3>
-          <p class="hotels_type_and_price">
-            <span class="hotels_type">Гостиница</span>
-            <span class="hotels_price">От 4000 ₽</span>
+          <span class="hotels_type">Гостиница</span>
+          <span class="hotels_price">От 4000 ₽</span>
+          <a class="hotels_button button_brown" href="#">Подробнее</a>
+          <button class="btn button_favourites button_blue" type="button">В избранное</button>
+          <p class="rating_star">
+            <span class="visually_hidden">4 звезды</span>
           </p>
-          <p class="hotels_buttons">
-            <a class="hotels_button button_brown" href="#">Подробнее</a>
-            <button class="btn button_favourites button_blue" type="button">В избранное</button>
-          </p>
-          <div class="rating_wrap">
-            <p class="rating_star">
-              <span class="visually-hidden">4 звезды</span>
-            </p>
-            <p class="rating_text">Рейтинг:8,5</p>
-          </div>
+          <p class="rating_text">Рейтинг:8,5</p>
         </li>
 
         <li class="hotels_card">
@@ -209,20 +208,14 @@
               alt="Скалы и радуга на закате">
           </a>
           <h3 class="hotels_title">Villas at Poco Diablo</h3>
-          <p class="hotels_type_and_price">
-            <span class="hotels_type">Гостиница</span>
-            <span class="hotels_price">От 5000 ₽</span>
+          <span class="hotels_type">Гостиница</span>
+          <span class="hotels_price">От 5000 ₽</span>
+          <a class="hotels_button button_brown" href="#">Подробнее</a>
+          <button class="btn button_favourites button_green" type="button">В избранном</button>
+          <p class="rating_star">
+            <span class="visually_hidden">4 звезды</span>
           </p>
-          <p class="hotels_buttons">
-            <a class="hotels_button button_brown" href="#">Подробнее</a>
-            <button class="btn button_favourites button_green" type="button">В избранном</button>
-          </p>
-          <div class="rating_wrap">
-            <p class="rating_star">
-              <span class="visually-hidden">4 звезды</span>
-            </p>
-            <p class="rating_text">Рейтинг:9,2</p>
-          </div>
+          <p class="rating_text">Рейтинг:9,2</p>
         </li>
 
         <li class="hotels_card">
@@ -231,20 +224,14 @@
               alt="Красные скалы на фоне закатного неба">
           </a>
           <h3 class="hotels_title">Desert Quail Inn</h3>
-          <p class="hotels_type_and_price">
-            <span class="hotels_type">Гостиница</span>
-            <span class="hotels_price">От 2500 ₽</span>
+          <span class="hotels_type">Гостиница</span>
+          <span class="hotels_price">От 2500 ₽</span>
+          <a class="hotels_button button_brown" href="#">Подробнее</a>
+          <button class="btn button_favourites button_blue" type="button">В избранное</button>
+          <p class="rating_star">
+            <span class="visually_hidden">3 звезды</span>
           </p>
-          <p class="hotels_buttons">
-            <a class="hotels_button button_brown" href="#">Подробнее</a>
-            <button class="btn button_favourites button_blue" type="button">В избранное</button>
-          </p>
-          <div class="rating_wrap">
-            <p class="rating_star">
-              <span class="visually-hidden">3 звезды</span>
-            </p>
-            <p class="rating_text">Рейтинг:6,9</p>
-          </div>
+          <p class="rating_text">Рейтинг:6,9</p>
         </li>
 
         <li class="hotels_card">
@@ -253,20 +240,14 @@
               alt="Скала под звёздным куполом">
           </a>
           <h3 class="hotels_title">GreenTree Inn</h3>
-          <p class="hotels_type_and_price">
             <span class="hotels_type">Гостиница</span>
             <span class="hotels_price">От 1500 ₽</span>
-          </p>
-          <p class="hotels_buttons">
             <a class="hotels_button button_brown" href="#">Подробнее</a>
             <button class="btn button_favourites button_blue" type="button">В избранное</button>
-          </p>
-          <div class="rating_wrap">
             <p class="rating_star">
-              <span class="visually-hidden">2 звезды</span>
+              <span class="visually_hidden">2 звезды</span>
             </p>
             <p class="rating_text">Рейтинг:5,0</p>
-          </div>
         </li>
       </ul>
 
@@ -309,25 +290,25 @@
 
   <!-- Подвал сайта -->
 
-  <footer class="page-footer">
+   <footer class="page-footer">
     <section class="social">
-      <h2 class="visually-hidden" hidden>Мы в социальных сетях</h2>
+      <h2 class="visually_hidden">Мы в социальных сетях</h2>
       <ul class="social_list">
         <li class="social_item">
           <a class="social_button button_vk" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden" hidden>VKontakte</span>
+            <span class="visually_hidden">VKontakte</span>
           </a>
         </li>
 
         <li class="social_item">
           <a class="social_button button_tg" href="https://t.me/htmlacademy">
-            <span class="visually-hidden" hidden>Telegram</span>
+            <span class="visually_hidden">Telegram</span>
           </a>
         </li>
 
         <li class="social_item">
           <a class="social_button button_youtube" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden" hidden>YouTube</span>
+            <span class="visually_hidden">YouTube</span>
           </a>
         </li>
       </ul>
@@ -336,7 +317,7 @@
     <a class="footer_contact_phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
     <a class="htmlacademy_link" href="https://htmlacademy.ru/intensive/htmlcss">
-      <span class="visually-hidden" hidden>Логотип сайта разработчика HTML Academy</span>
+      <span class="visually_hidden">Логотип сайта разработчика HTML Academy</span>
     </a>
   </footer>
 </body>

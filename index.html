@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="styles/styles.css">
   <title>Седона</title>
+  <link rel="icon" href="favicon.ico" sizes="16x16">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
       <!-- Блок навигации -->
 
       <ul class="navigation_list">
-        <li class="navigation_item navigation_item_current">
+        <li class="navigation_item">
           <a class="navigation_link navigation_link_current" href="index.html" aria-current="page">Главная</a>
         </li>
         <li class="navigation_item">
@@ -33,20 +34,24 @@
       <ul class="navigation_user">
         <li class="navigation_item">
           <a class="navigation_link search" href="#">
-            <span class="visually_hidden" hidden>Поиск</span>
+            <svg class="navigation_link_icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+              <path fill="#000" d="m19.5 18.008-3.7-3.68c1-1.292 1.7-2.983 1.7-4.872 0-4.376-3.6-7.956-8-7.956s-8 3.68-8 8.055c0 4.376 3.6 7.956 8 7.956 1.8 0 3.5-.597 4.9-1.69l3.7 3.679zm-10-2.486c-3.3 0-6-2.685-6-5.967s2.7-5.967 6-5.967 6 2.685 6 5.967-2.7 5.967-6 5.967"/>
+            </svg>
+            <span class="visually_hidden">Поиск</span>
           </a>
         </li>
         <li class="navigation_item">
           <a class="navigation_link favourite" href="#">
-            <span class="visually_hidden" hidden>Отелей в избранном:</span>
+            <svg class="navigation_link_icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none" viewBox="0 0 18 17">
+              <path fill="#000" d="M8.9 17c-.3 0-.6-.1-.8-.4-5.4-6.1-6.7-7.5-7-7.9C.4 7.8 0 6.6 0 5.4 0 2.4 2.4 0 5.5 0 6.8 0 8 .5 9 1.3 10 .5 11.3 0 12.5 0c3 0 5.5 2.4 5.5 5.4 0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3m-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4s-.6-.2-.8-.4c-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1q-.15 0 0 0"/>
+            </svg>
+            <span class="visually_hidden">Отелей в избранном:</span>
             <span class="favourites_counter"></span>
           </a>
         </li>
-        <li class="navigation_item">
-          <a class="navigation_button button_brown" href="#">
-            <span>Хочу сюда!</span>
-          </a>
-        </li>
+        <a class="navigation_button button_brown" href="#">
+          <span>Хочу сюда!</span>
+        </a>
       </ul>
     </nav>
   </header>
@@ -56,7 +61,7 @@
     <!-- Приветствие -->
 
     <section class="page_welcome">
-      <h1 class="visually-hidden" hidden>Сайт города Седона</h1>
+      <h1 class="visually_hidden">Сайт города Седона</h1>
       <img class="welcome" src="images/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
     </section>
 
@@ -70,40 +75,37 @@
       </div>
 
       <ul class="advantages_list">
-        <li class="advantages_item advantages_item_blue advantages_item_wrap">
+        <li class="advantages_item advantages_item_blue">
           <div class="advantages_wrap">
-            <h3 class="advantages_item_title item_title">Настоящий городок</h3>
+            <h3 class="advantages_item_title item_title item_title_img">Настоящий<br> городок</h3>
             <p class="advantages_item_description item_description">Седона — не аттракцион для<br> туристов, там течёт своя<br> жизнь</p>
           </div>
-          <img class="advantages_pic" src="images/street.jpg" width="800" height="385" alt="Улица Седоны">
         </li>
+        <img class="advantages_img_1" src="images/street.jpg" width="800" height="385" alt="Улица Седоны">
 
-
-        <div class="advantages_item_wrap">
           <li class="advantages_item advantages_item_light">
             <div class="advantages_wrap">
-              <h3 class="advantages_item_title item_title">Небольшая площадь</h3>
+              <h3 class="advantages_item_title item_title">Небольшая<br> площадь</h3>
               <p class="advantages_item_description item_description">Все достопримечательности<br> находятся очень близко</p>
             </div>
           </li>
           <li class="advantages_item advantages_item_light_blue">
             <div class="advantages_wrap">
-              <h3 class="advantages_item_title item_title">Красивая дорога</h3>
+              <h3 class="advantages_item_title item_title">Красивая<br> дорога</h3>
               <p class="advantages_item_description item_description">Ехать в Седону из Лас-Вегаса<br> совсем не скучно!</p>
             </div>
           </li>
           <li class="advantages_item advantages_item_light">
             <div class="advantages_wrap">
-              <h3 class="advantages_item_title item_title">Мало туристов</h3>
+              <h3 class="advantages_item_title item_title">Мало<br> туристов</h3>
               <p class="advantages_item_description item_description">Большинство едет в Гранд<br> Каньон и толпится там</p>
             </div>
           </li>
-        </div>
 
-        <li class="advantages_item advantages_item_blue advantages_item_wrap">
-          <img class="advantages_pic" src="images/bridge.jpg" width="800" height="385" alt="Мост Дьявола">
+        <img class="advantages_img_2" src="images/bridge.jpg" width="800" height="385" alt="Мост Дьявола">
+        <li class="advantages_item advantages_item_blue">
           <div class="advantages_wrap">
-            <h3 class="advantages_item_title item_title">Там есть Мост Дьявола</h3>
+            <h3 class="advantages_item_title item_title item_title_img">Там есть<br> Мост Дьявола</h3>
             <p class="advantages_item_description item_description">Да, по нему можно пройти!<br> Если вы осмелитесь,<br> разумеется</p>
           </div>
         </li>
@@ -149,7 +151,7 @@
       <h2 class="subscribe_title block_title">Подпишитесь на рассылку</h2>
       <p class="subscribe_text block_description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
       <form class="subscribe_form" action="https://echo.htmlacademy.ru/" method="post">
-        <label class="visually_hidden" for="subscribe_field" hidden>Введите Ваш E-mail</label>
+        <label class="visually_hidden" for="subscribe_field">Введите Ваш E-mail</label>
         <input class="input subscribe_field" type="email" name="subscribe_email" placeholder="Ваш e-mail" id="subscribe_field"
             required>
         <button class="btn subscribe_button button_blue" type="submit">Подписаться</button>
@@ -161,23 +163,23 @@
 
   <footer class="page-footer">
     <section class="social">
-      <h2 class="visually-hidden" hidden>Мы в социальных сетях</h2>
+      <h2 class="visually_hidden">Мы в социальных сетях</h2>
       <ul class="social_list">
         <li class="social_item">
           <a class="social_button button_vk" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden" hidden>VKontakte</span>
+            <span class="visually_hidden">VKontakte</span>
           </a>
         </li>
 
         <li class="social_item">
           <a class="social_button button_tg" href="https://t.me/htmlacademy">
-            <span class="visually-hidden" hidden>Telegram</span>
+            <span class="visually_hidden">Telegram</span>
           </a>
         </li>
 
         <li class="social_item">
           <a class="social_button button_youtube" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden" hidden>YouTube</span>
+            <span class="visually_hidden">YouTube</span>
           </a>
         </li>
       </ul>
@@ -186,7 +188,7 @@
     <a class="footer_contact_phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
     <a class="htmlacademy_link" href="https://htmlacademy.ru/intensive/htmlcss">
-      <span class="visually-hidden" hidden>Логотип сайта разработчика HTML Academy</span>
+      <span class="visually_hidden">Логотип сайта разработчика HTML Academy</span>
     </a>
   </footer>
 </body>

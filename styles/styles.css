@@ -17,6 +17,7 @@
 html {
   height: 100%;
   width: 100%;
+  background-color: #f2f2f2;
 }
 
 body {
@@ -28,6 +29,7 @@ body {
   font-family: "PT Sans", sans-serif;
   color: #000;
   background-color: #fff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .main_container {
@@ -404,18 +406,22 @@ body {
 }
 
 .subscribe_field {
-  padding: 0;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-block: 14px;
   border: 0;
   font-size: 18px;
   line-height: 24px;
   background-color: #F2F2F2;
   width: 452px;
+  border-radius: 4px 0 0 4px;
 }
 
 .subscribe_button {
   font-size: 20px;
   line-height: 36px;
   flex-grow: 1;
+  border-radius: 0 4px 4px 0;
 }
 
 /* Подвал сайта */
@@ -490,6 +496,8 @@ body {
 }
 
 .breadcrumbs_link {
+  text-decoration: none;
+  color: #fff;
   cursor: pointer;
   fill: #fff;
 }
@@ -537,32 +545,31 @@ body {
   gap: 16px;
 }
 
-.control_input {
-  min-width: 20px;
-  min-height: 20px;
+.control_check {
   margin: 0;
   appearance: none;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 20px;
+  height: 20px;
+  background: url("../images/catalog/checkbox.svg");
 }
 
-input[type="checkbox"] {
-  background-image: url("../images/catalog/checkbox.svg");
+.control_check:checked {
+  background: url("../images/catalog/check.svg") no-repeat center, url("../images/catalog/checkbox.svg");
 }
 
-input[type="checkbox"]:checked {
-  background-image: url("../images/catalog/check.svg"), url("../images/catalog/checkbox.svg");
+.control_mark {
+  margin: 0;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: url("../images/catalog/radio.svg");
 }
 
-input[type="radio"] {
-  background-image: url("../images/catalog/radio.svg");
+.control_mark:checked {
+  background: url("../images/catalog/mark.svg") no-repeat center, url("../images/catalog/radio.svg");
 }
 
-input[type="radio"]:checked {
-  background-image: url("../images/catalog/mark.svg"), url("../images/catalog/radio.svg");
-}
-
-.control_label {
+.control_description {
   font-size: 18px;
   line-height: 23px;
 }
@@ -581,6 +588,7 @@ input[type="radio"]:checked {
   width: 288px;
   display: flex;
   gap: 2px;
+  margin-bottom: 36px;
 }
 
 .price_control {
@@ -588,7 +596,47 @@ input[type="radio"]:checked {
   width: 143px;
   height: 48px;
   border: 0;
+  padding: 12px 20px;
+  background-color: #f2f2f2;
+}
+
+.control_price:nth-child(1) .price_control {
+  border-radius: 4px 0 0 4px;
+}
+
+.control_price:nth-child(2) .price_control {
+  border-radius: 0 4px 4px 0;
+}
+
+.range_scale {
+  position: relative;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.range_selection {
+  position: absolute;
+  background-color: #fff;
+  height: 4px;
+}
+
+.range_toggler {
+  border: 0;
   padding: 0;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggler_min {
+  top: -8px;
+}
+
+.toggler_max {
+  top: -8px;
 }
 
 .button_wrap {
@@ -640,12 +688,14 @@ input[type="radio"]:checked {
 }
 
 .select_control {
-  padding: 0;
+  padding: 14px 20px;
   margin-right: 70px;
   width: 292px;
   height: 49px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  appearance: none;
+  background: url("../images/catalog/arrow_down.svg") no-repeat right 20px center;
 }
 
 .sort_list {
@@ -704,6 +754,7 @@ input[type="radio"]:checked {
 }
 
 .hotels_card {
+  width: 340px;
   box-sizing: border-box;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
@@ -783,6 +834,10 @@ input[type="radio"]:checked {
   width: 48px;
 }
 
+.star_5 {
+  width: 120px;
+}
+
 .rating_text {
   box-sizing: border-box;
   margin: 0;
@@ -797,6 +852,72 @@ input[type="radio"]:checked {
   justify-self: end;
 }
 
+/* Карточка отеля Азимут */
+
+.slider_wrap {
+  grid-column: 1 / -1;
+  position: relative;
+}
+
+.slider_pagination_list {
+  padding: 0;
+  grid-column: 1 / -1;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.slider_pagination_item {
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider_pagination_button {
+  box-sizing: border-box;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #dbdbdb;
+}
+
+.slider_button_wrap {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-15px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider_button {
+  width: 20px;
+  height: 30px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  background-image: url("../images/catalog/azimut_hotel/arrow_right.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.button_prev {
+  transform: rotate(180deg);
+}
+
+.slider_pagination_button_current {
+  background-color: #242424;
+  cursor: default;
+}
 /* Пагинация */
 
 .pagination_list {
@@ -869,6 +990,13 @@ input {
 .navigation_link:active {
   opacity: 0.3;
 }
+
+
+/* Рассылка */
+.subscribe_field:hover {
+  opacity: 0.9;
+}
+
 
 /* Кнопки/ссылки */
 .button_brown:disabled,
@@ -946,6 +1074,12 @@ input {
   opacity: 0.6;
 }
 
+.breadcrumbs_link:focus {
+  outline: none;
+  border-radius: 4px;
+  box-shadow: 0 0 0 3px #83B3D3;
+}
+
 .breadcrumbs_link:active {
   opacity: 0.3;
 }
@@ -956,33 +1090,41 @@ input {
   opacity: 0.6;
 }
 
-input[type="checkbox"]:focus-visible {
+.control_check:focus-visible {
+  outline: none;
   border-radius: 4px;
   box-shadow: 0 0 0 3px #83B3D3;
 }
 
-input[type="radio"]:focus-visible {
-  box-shadow: 0 0 0 3px #83B3D3;
+.control_mark:focus-visible {
+  outline:none;
   border-radius: 18px;
+  box-shadow: 0 0 0 3px #83B3D3;
 }
 
 .catalog_filter_item:active {
   opacity: 0.3;
 }
 
+.price_control:hover {
+  background-color: #e6e6e6;
+}
+
 .price_control:focus {
+  outline: none;
+  border: 3px solid #83b3d3;
+}
+
+.range_toggler:hover {
+  background-color: #e6e6e6
+}
+
+.range_toggler:focus-visible {
   outline: 3px solid #83B3D3;
 }
 
-.select_control:disabled {
-  pointer-events: none;
-  border-color: rgba(0, 0, 0, 0.3);
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.select_control:hover,
-.select_control:focus {
-  border-color: #68A2CA;
+.range_toggler:active {
+  outline: 2px solid #83B3D3;
 }
 
 .button_reset:disabled {
@@ -994,8 +1136,8 @@ input[type="radio"]:focus-visible {
 }
 
 .button_reset:focus-visible {
-  border: 3px solid #83B3D3;
   border-radius: 4px;
+  outline: 3px solid #83B3D3;
 }
 
 .button_reset:active {
@@ -1003,7 +1145,20 @@ input[type="radio"]:focus-visible {
 }
 
 /* Сортировка */
+.select_control:disabled {
+  pointer-events: none;
+  border-color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.select_control:hover,
+.select_control:focus {
+  outline: none;
+  border-color: #68A2CA;
+}
+
 .sort_link:focus{
+  outline: none;
   border-color: #68A2CA;
 }
 .sort_link:hover {
@@ -1023,4 +1178,29 @@ input[type="radio"]:focus-visible {
 .pagination_link:not(.pagination_link_current):not(.pagination_more):active {
   background-color: #82B3D3;
   color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Карточка отеля Азимут */
+
+.slider_button:hover {
+  background-color: #814b18;
+}
+
+.slider_button:focus {
+  box-shadow: inset 0 0 0 2px #dbb590;
+  background-color: #4e2e0e;
+}
+
+.slider_pagination_button:not(.slider_pagination_button_current):hover {
+  background-color: #af7842
+}
+
+.slider_pagination_button:not(.slider_pagination_button_current):focus {
+  background-color: #dbb590;
+  outline: none;
+}
+
+.slider_pagination_button_current:focus {
+  outline: none;
 }

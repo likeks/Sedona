@@ -75,7 +75,7 @@
             </a>
           </li>
           <li class="breadcrumbs_item">
-            <a class="breadcrumbs_link breadcrumbs_current" aria-current="page">Гостиницы</a>
+            <a class="breadcrumbs_link breadcrumbs_current" href="catalog.html" aria-current="page">Гостиницы</a>
           </li>
         </ul>
       </header>
@@ -89,21 +89,21 @@
             <legend class="catalog_filter_title">Инфраструктура:</legend>
             <ul class="catalog_filter_list">
               <li class="catalog_filter_item">
-                <input class="control_input" type="checkbox" name="swimming_pool" id="swimming_pool" checked>
-                <label class="control" for="swimming_pool">
-                  <span class="control_label">Бассейн</span>
+                <input class="control_check" type="checkbox" name="swimming_pool" id="swimming_pool" checked>
+                <label class="control_label" for="swimming_pool">
+                  <span class="control_description">Бассейн</span>
                 </label>
               </li>
               <li class="catalog_filter_item">
-                <input class="control_input" type="checkbox" name="parking_place" id="parking" checked>
-                <label class="control" for="parking">
-                  <span class="control_label">Парковка</span>
+                <input class="control_check" type="checkbox" name="parking_place" id="parking" checked>
+                <label class="control_label" for="parking">
+                  <span class="control_description">Парковка</span>
                 </label>
               </li>
               <li class="catalog_filter_item">
-                <input class="control_input" type="checkbox" name="Wi-Fi" id="Wi-Fi">
-                <label class="control" for="Wi-Fi">
-                  <span class="control_label">Wi-Fi</span>
+                <input class="control_check" type="checkbox" name="Wi-Fi" id="Wi-Fi">
+                <label class="control_label" for="Wi-Fi">
+                  <span class="control_description">Wi-Fi</span>
                 </label>
               </li>
             </ul>
@@ -112,28 +112,25 @@
             <legend class="catalog_filter_title">Тип Жилья:</legend>
             <ul class="catalog_filter_list">
               <li class="catalog_filter_item">
-                <input class="control_input" type="radio" name="hotel_type" value="hotel" id="hotel" checked>
-                <label class="control" for="hotel">
-                  <span class="control_label">Гостиница</span>
+                <input class="control_mark" type="radio" name="hotel_type" value="hotel" id="hotel" checked>
+                <label class="control_label" for="hotel">
+                  <span class="control_description">Гостиница</span>
                 </label>
               </li>
               <li class="catalog_filter_item">
-                <input class="control_input" type="radio" name="hotel_type" value="motel" id="motel">
-                <label class="control" for="motel">
-                  <span class="control_label">Мотель</span>
+                <input class="control_mark" type="radio" name="hotel_type" value="motel" id="motel">
+                <label class="control_label" for="motel">
+                  <span class="control_description">Мотель</span>
                 </label>
               </li>
               <li class="catalog_filter_item">
-                <input class="control_input" type="radio" name="hotel_type" value="apartment" id="apartment">
-                <label class="control" for="apartment">
-                  <span class="control_label">Апартаменты</span>
+                <input class="control_mark" type="radio" name="hotel_type" value="apartment" id="apartment">
+                <label class="control_label" for="apartment">
+                  <span class="control_description">Апартаменты</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-
-
-          <!-- Доделать ценовой фильтр -->
 
           <div class="price_wrap">
             <fieldset class="catalog_filter_group">
@@ -145,6 +142,16 @@
                 <label class="control_price">
                   <input class="input control_field price_control" type="number" value="9000">
                 </label>
+              </div>
+              <div class="range_scale">
+                <div class="range_selection" style="left: 0; width: 226px">
+                  <button type="button" class="range_toggler toggler_min" style="left: 0">
+                    <span class="visually_hidden">Изменить минимальную цену</span>
+                  </button>
+                  <button type="button" class="range_toggler toggler_max" style="right: 0">
+                    <span class="visually_hidden">Изменить максимальную цену</span>
+                  </button>
+                </div>
               </div>
             </fieldset>
           </div>
@@ -204,7 +211,7 @@
           <p class="rating_star star_4">
             <span class="visually_hidden">Четырёхзвёздочная гостиница</span>
           </p>
-          <p class="rating_text">Рейтинг:8,5</p>
+          <p class="rating_text">Рейтинг: 8,5</p>
         </li>
 
         <li class="hotels_card">
@@ -220,7 +227,7 @@
           <p class="rating_star star_4">
             <span class="visually_hidden">Четырёхзвёздочная гостиница</span>
           </p>
-          <p class="rating_text">Рейтинг:9,2</p>
+          <p class="rating_text">Рейтинг: 9,2</p>
         </li>
 
         <li class="hotels_card">
@@ -236,7 +243,7 @@
           <p class="rating_star star_3">
             <span class="visually_hidden">Трёхзвёздочная гостиница</span>
           </p>
-          <p class="rating_text">Рейтинг:6,9</p>
+          <p class="rating_text">Рейтинг: 6,9</p>
         </li>
 
         <li class="hotels_card">
@@ -252,7 +259,55 @@
             <p class="rating_star star_2">
               <span class="visually_hidden">Двухзвёздочная гостиница</span>
             </p>
-            <p class="rating_text">Рейтинг:5,0</p>
+            <p class="rating_text">Рейтинг: 5,0</p>
+        </li>
+
+        <li class="hotels_card">
+          <div class="slider_wrap">
+            <a href="#" class="hotels_link">
+              <img class="hotels_image" src="images/catalog/azimut_hotel/azimut_hotel.jpg" width="300" height="212"
+                  alt="Главный вход в отель">
+            </a>
+            <div class="slider_button_wrap">
+              <button type="button" class="slider_button button_prev">
+                <span class="visually_hidden">Предыдущее фото</span>
+              </button>
+              <button type="button" class="slider_button button_next">
+                <span class="visually_hidden">Следующее фото</span>
+              </button>
+            </div>
+            <ol class="slider_pagination_list">
+              <li class="slider_pagination_item">
+                <button type="button" class="slider_pagination_button slider_pagination_button_current">
+                  <span class="visually_hidden">1 фото</span>
+                </button>
+              </li>
+              <li class="slider_pagination_item">
+                <button type="button" class="slider_pagination_button">
+                  <span class="visually_hidden">2 фото</span>
+                </button>
+              </li>
+              <li class="slider_pagination_item">
+                <button type="button" class="slider_pagination_button">
+                  <span class="visually_hidden">3 фото</span>
+                </button>
+              </li>
+              <li class="slider_pagination_item">
+                <button type="button" class="slider_pagination_button">
+                  <span class="visually_hidden">4 фото</span>
+                </button>
+              </li>
+            </ol>
+          </div>
+          <h3 class="hotels_title">Azimut hotel</h3>
+            <span class="hotels_type">Отель</span>
+            <span class="hotels_price">От 2000 ₽</span>
+            <a class="hotels_button button_brown" href="#">Подробнее</a>
+            <button class="btn button_favourites button_blue" type="button">В избранное</button>
+            <p class="rating_star star_5">
+              <span class="visually_hidden">Пятизвёздочный отель</span>
+            </p>
+            <p class="rating_text">Рейтинг: 9,5</p>
         </li>
       </ul>
 

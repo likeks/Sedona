@@ -754,10 +754,13 @@ body {
   cursor: default;
 }
 
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .number_input {
   -webkit-appearance: none;
   appearance: none;
-  -moz-appearance: textfield;
 }
 
 .number_input_wrap {
